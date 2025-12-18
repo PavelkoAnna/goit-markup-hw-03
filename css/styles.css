@@ -1,14 +1,49 @@
 ul {
   list-style: none;
+  margin: 0;
+  padding: 0;
+}
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
 }
 a {
   text-decoration: none;
+}
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
 }
 body {
   font-family: "Roboto", sans-serif;
   color: #434455;
   background-color: #fff;
 }
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+/* .conteiner {
+  width: 100%;
+  width: 1440px;
+  padding-left: 15px;
+  padding-right: 15px;
+  margin: 0 auto;
+} */
 .section-logo {
   font-family: "Raleway", sans-serif;
   font-weight: 700;
@@ -46,8 +81,26 @@ body {
 /* header  */
 .header {
   background-color: #fff;
+  padding-top: 24px;
+  padding-bottom: 24px;
+}
+.header-conteiner {
+  display: flex;
+  justify-content: space-between;
+  padding: 0;
+  align-items: center;
+}
+.header-logo-menu {
+  display: flex;
+  align-items: center;
+  gap: 76px;
 }
 .header-logo {
+  margin-right: 76px;
+}
+.header-menu-list ul {
+  display: flex;
+  gap: 40px;
 }
 .header-menu-list a {
   font-weight: 500;
@@ -65,6 +118,10 @@ body {
 .header-contacts {
   font-style: normal;
 }
+.header-contacts ul {
+  display: flex;
+  gap: 40px;
+}
 .header-contacts a {
   font-weight: 400;
   font-size: 16px;
@@ -81,6 +138,13 @@ body {
 .hero {
   background-color: #2e2f42;
 }
+.hero-wrapper {
+  padding-top: 188px;
+  padding-bottom: 188px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
 .hero-title {
   font-weight: 700;
   font-size: 56px;
@@ -88,6 +152,8 @@ body {
   letter-spacing: 0.02em;
   text-align: center;
   color: #fff;
+  margin-bottom: 48px;
+  max-width: 496px;
 }
 .hero-btn {
   font-weight: 500;
@@ -96,6 +162,9 @@ body {
   letter-spacing: 0.04em;
   color: #fff;
   background-color: #4d5ae5;
+  border-radius: 4px;
+  padding: 16px 32px;
+  border: none;
 }
 .hero-btn:hover,
 .hero-btn:focus {
@@ -103,7 +172,19 @@ body {
   cursor: pointer;
 }
 /* features */
+.features-conteiner ul {
+  padding-top: 120px;
+  padding-bottom: 120px;
+  display: flex;
+  gap: 24px;
+}
+.features-conteiner li {
+  width: calc((100% - 72px) / 4);
+}
+
 .features-subtitle {
+  margin-bottom: 8px;
+  max-width: 264px;
 }
 .features-text {
 }
@@ -111,16 +192,42 @@ body {
 /* team  */
 .team {
   background-color: #f4f4fd;
+  padding: 120px 0;
+}
+.conteiner {
+  width: 1158px;
+  padding: 0 15px;
+  margin: 0 auto;
 }
 .team-card {
   background-color: #fff;
+  width: calc((100% - 72px) / 4);
+  border-radius: 0 0 4px 4px;
 }
 .team-title {
+  text-align: center;
+  text-transform: capitalize;
+  margin-bottom: 72px;
+}
+.team-list {
+  display: flex;
+  gap: 24px;
+  justify-content: center;
+  padding: 0;
+  margin: 0;
 }
 .team-img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+.team-info {
+  padding: 32px 0;
+  text-align: center;
 }
 .team-subtitle {
   text-align: center;
+  margin-bottom: 8px;
 }
 .team-text {
   text-align: center;
@@ -129,17 +236,44 @@ body {
 .portfolio {
   background-color: #fff;
 }
+.portfolio-conteiner {
+  padding-bottom: 120px;
+  padding-top: 120px;
+}
+.portfolio-conteiner ul {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 24px;
+  margin-top: 72px;
+}
+.portfolio-conteiner li {
+  width: calc((100% - 48px) / 3);
+  background-color: #f4f4fd;
+  border-radius: 4px 4px 0 0;
+}
+.portfolio-info {
+  display: block;
+  padding: 32px 16px;
+  border-right: 1px solid #e7e9fc;
+  border-bottom: 1px solid #e7e9fc;
+  border-left: 1px solid #e7e9fc;
+}
 .portfolio-title {
 }
 .portfolio-img {
 }
 .portfolio-subtitle {
+  padding-bottom: 8px;
 }
 .portfolio-text {
 }
 /* footer  */
 .footer {
   background-color: #2e2f42;
+}
+.footer-conteiner {
+  padding-top: 100px;
+  padding-bottom: 100px;
 }
 .footer-logo {
   font-family: "Raleway", sans-serif;
@@ -156,4 +290,6 @@ body {
   line-height: 1.5;
   letter-spacing: 0.02em;
   color: #f4f4fd;
+  margin-top: 16px;
+  max-width: 264px;
 }
