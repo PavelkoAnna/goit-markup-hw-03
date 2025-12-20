@@ -174,13 +174,12 @@ body {
   cursor: pointer;
 }
 /* features */
-.features {
-  padding: 120px 0;
-}
+
 
 .features-container ul {
   display: flex;
   gap: 24px;
+  padding: 120px 0;
 }
 .features-container li {
   width: calc((100% - 72px) / 4);
